@@ -22,6 +22,8 @@ Vue.use(VueRouter);
 var VueResource = require('vue-resource');
 Vue.use(VueResource);
 
+Vue.http.options.root = '/api'
+
 const routes = [
     { path: '/', component: One },
     { path: '/two', component: Two }
