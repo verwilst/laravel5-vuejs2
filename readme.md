@@ -10,6 +10,17 @@ Laravel is a web application framework with expressive, elegant syntax. We belie
 
 Laravel is accessible, yet powerful, providing tools needed for large, robust applications. A superb inversion of control container, expressive migration system, and tightly integrated unit testing support give you the tools you need to build any application with which you are tasked.
 
+## Initial setup
+
+docker run -it --rm -v `pwd`:/app -w /app verwilst/npm install
+docker run -it --rm -v `pwd`:/app -w /app composer:composer install
+docker run -it --rm -v `pwd`:/app -w /app -p 8000:8000 phpdockerio/php7-cli php artisan key:generate
+
+## How to run
+
+docker run --rm -it -v `pwd`:/app -w /app -p 8000:8000 phpdockerio/php7-cli php artisan serve --host=0.0.0.0
+docker run --rm -it -v `pwd`:/app -w /app verwilst/gulp watch
+
 ## Official Documentation
 
 Documentation for the framework can be found on the [Laravel website](http://laravel.com/docs).
