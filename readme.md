@@ -14,7 +14,7 @@
 
 ## When MongoDB is needed
 
-docker run --name mongo -d mongo
+> docker run --name mongo -d mongo
 
 > docker run --rm -it --link mongo:mongo -v $(pwd):/app -w /app -p 8000:8000 verwilst/php7-cli php artisan serve --host=0.0.0.0
 
