@@ -16,4 +16,9 @@ docker run --rm -it -v `pwd`:/app -w /app verwilst/gulp watch
 
 docker run --name mongo -d mongo
 
-docker run --rm -it --link mongo:mongo -v $(pwd):/app -w /app -p 8000:8000 verwilst/php7-cli php artisan serve --host=0.0.0.0
+> docker run --rm -it --link mongo:mongo -v $(pwd):/app -w /app -p 8000:8000 verwilst/php7-cli php artisan serve --host=0.0.0.0
+
+Using the MongoDB console is as easy as calling:
+
+> docker exec -it mongo mongo admin
+
