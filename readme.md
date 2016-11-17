@@ -6,15 +6,15 @@
 
 ## How to run
 
-> docker run --rm -it -v $(pwd):/app -w /app -p 8000:8000 verwilst/php7-cli php artisan serve --host=0.0.0.0
+> docker run --name myproject -it -d -v $(pwd):/app -w /app -p 8000:8000 verwilst/php7-cli php artisan serve --host=0.0.0.0
 
-> docker run --rm -it -v $(pwd):/app -w /app verwilst/gulp watch
+> docker run --name myproject-gulp -it -d -v $(pwd):/app -w /app verwilst/gulp watch
 
 ## When MongoDB is needed
 
 > docker run --name mongo -v $(pwd):/app -d mongo
 
-> docker run --rm -it --link mongo:mongo -v $(pwd):/app -w /app -p 8000:8000 verwilst/php7-cli php artisan serve --host=0.0.0.0
+> docker run --name myproject -it -d --link mongo:mongo -v $(pwd):/app -w /app -p 8000:8000 verwilst/php7-cli php artisan serve --host=0.0.0.0
 
 Using the MongoDB console is as easy as calling:
 
