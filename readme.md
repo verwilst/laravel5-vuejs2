@@ -8,7 +8,7 @@
 
 > docker run --name myproject -it -d -v $(pwd):/app -w /app -p 8000:8000 verwilst/php7-cli php artisan serve --host=0.0.0.0
 
-> docker run --name myproject-gulp -it -d -v $(pwd):/app -w /app verwilst/gulp watch
+> docker run --name myproject-gulp -it -d -v $(pwd):/app -p 35729:35729 -w /app verwilst/gulp watch
 
 ## When MongoDB is needed
 
