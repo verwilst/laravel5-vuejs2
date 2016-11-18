@@ -1,6 +1,6 @@
-import App from './App.vue'
-import One from './components/One.vue'
-import Two from './components/Two.vue'
+import App from './pages/App.vue'
+import FirstPage from './pages/FirstPage.vue'
+import SecondPage from './pages/SecondPage.vue'
 
 /**
  * First we will load all of this project's JavaScript dependencies which
@@ -25,8 +25,8 @@ Vue.use(VueResource);
 Vue.http.options.root = '/api'
 
 const routes = [
-    { path: '/', component: One },
-    { path: '/two', component: Two }
+    { path: '/', component: FirstPage },
+    { path: '/two', component: SecondPage }
   ]
 
 const router = new VueRouter({
