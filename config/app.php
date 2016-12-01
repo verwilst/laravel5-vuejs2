@@ -178,6 +178,15 @@ return [
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
 
+        /*
+         * Third-party Service Providers...
+         */
+        Dingo\Api\Provider\LaravelServiceProvider::class,
+        Tymon\JWTAuth\Providers\LaravelServiceProvider::class,
+        \L5Swagger\L5SwaggerServiceProvider::class,
+        // Jenssegers\Mongodb\MongodbServiceProvider::class
+
+
     ],
 
     /*

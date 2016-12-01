@@ -13,11 +13,42 @@ use Illuminate\Http\Request;
 |
 */
 
-Route::get('/user', function (Request $request) {
-    return $request->user();
-})->middleware('auth:api');
+/**
+ * @SWG\Swagger(
+ *   @SWG\Info(
+ *     title="Laravel-JWT API",
+ *     version="1.0.0"
+ *   )
+ * )
+ */
 
-Route::get('/', function (Request $request) {
-    return view('test');
+$api = app('Dingo\Api\Routing\Router');
+
+$api->version('v1', [], function ($api) {
+
+    $api->post('auth/token', 'App\Http\Controllers\Auth\LoginController@login');
+
+    $api->group(['middleware' => 'api.auth'], function ($api) {
+
+        /**
+         * @SWG\Get(
+         *     path="/",
+         *     operationId="token",
+         *     summary="Example.",
+         *     description="",
+         *     consumes={"application/json", "application/xml"},
+         *     produces={"application/xml", "application/json"},
+         *     @SWG\Response(
+         *         response=200,
+         *         description="Example successful",
+         *     )
+         * )
+         */
+        $api->get('/', function (Request $request) {
+            return '';
+        });
+    });
+
 });
+
 
