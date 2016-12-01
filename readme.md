@@ -8,7 +8,7 @@ Go into the webroot.
 
 Make sure to chown all the data in your webroot to your own user, since docker sets ownership to added files to root.
 
-> chown <myuser>: . -R
+> chown verwilst: . -R
 
 ## How to run
 
