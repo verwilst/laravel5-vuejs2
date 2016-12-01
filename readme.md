@@ -16,9 +16,8 @@ Make sure to chown all the data in your webroot to your own user, since docker s
 
 > docker run --name myproject -it -d -v $(pwd):/app -w /app -p 8000:8000 verwilst/php7-cli php artisan serve --host=0.0.0.0
 
-You can now open your browser on http://127.0.0.1:8000 .
 
-The project is configured to support live reloading. The browser opens a websocket to port 35729, so make sure it's accessible:
+The project is configured to support live reloading. The browser opens a websocket to port 35729, so make sure it's accessible. This also compiles app.css and app.js under public/{css,js}:
 
 > docker run --name myproject-gulp -it -d -v $(pwd):/app -p 35729:35729 -w /app verwilst/gulp watch
 
@@ -27,6 +26,8 @@ The project is configured to support live reloading. The browser opens a websock
 > docker start mongo percona myproject myproject-gulp
 
 ( Leaving off mongo and/or percona if you didn't create those docker containers ofcourse. )
+
+You can now open your browser on http://127.0.0.1:8000 .
 
 ## When MongoDB is needed
 
