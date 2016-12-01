@@ -6,6 +6,12 @@ Go into the webroot.
 
 > docker run -it --rm -v $(pwd):/app -w /app verwilst/php7-cli composer install
 
+> cp -f .env.example .env
+
+> docker run -it --rm -v $(pwd):/app -w /app verwilst/php7-cli php artisan key:generate
+
+> docker run -it --rm -v $(pwd):/app -w /app verwilst/php7-cli php artisan jwt:secret
+
 Make sure to chown all the data in your webroot to your own user, since docker sets ownership to added files to root.
 
 > sudo chown verwilst: . -R
