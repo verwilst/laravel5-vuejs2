@@ -12,6 +12,8 @@ Go into the webroot.
 
 > docker run -it --rm -v $(pwd):/app -w /app verwilst/php7-cli php artisan jwt:secret
 
+> docker run -it --rm -v $(pwd):/app -w /app verwilst/php7-cli php artisan l5-swagger:publish-assets
+
 Make sure to chown all the data in your webroot to your own user, since docker sets ownership to added files to root.
 
 > sudo chown verwilst: . -R
