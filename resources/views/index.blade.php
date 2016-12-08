@@ -6,7 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="csrf-token" content="{{ csrf_token() }}">
 
-        <title>Laravel/Vue.js</title>
+        <title>Laravel5/Vue.js2</title>
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
@@ -23,12 +23,6 @@
     </script>
 
     <script src="/js/app.js"></script>
-    
-    @if ( Config::get('app.debug') )
-  <script type="text/javascript">
-      document.write('<script src="//localhost:35729/livereload.js?snipver=1" type="text/javascript"><\/script>')
-  </script>
-    @endif
-    
+
     </body>
 </html>

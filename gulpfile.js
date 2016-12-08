@@ -1,7 +1,6 @@
 const elixir = require('laravel-elixir');
 
 require('laravel-elixir-vue-2');
-require('laravel-elixir-livereload');
 
 /*
  |--------------------------------------------------------------------------
@@ -17,5 +16,8 @@ require('laravel-elixir-livereload');
 elixir(mix => {
     mix.sass('app.scss')
        .webpack('app.js');
-    mix.livereload();
+    mix.browserSync({
+        proxy: 'web:8000',
+        open: false
+    });
 });
