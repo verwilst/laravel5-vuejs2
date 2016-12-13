@@ -44,7 +44,7 @@ You can now open your browser on http://127.0.0.1:3000 .
 
 > docker run --name mongo -d mongo
 
-> docker run --name myproject -it -d --link mongo:mongo -v $(pwd):/app -w /app -p 8000:8000 verwilst/php7-cli php artisan serve --host=0.0.0.0
+> docker run --name myproject -it -d --link mongo:mongo -v $(pwd):/app -w /app verwilst/php7-cli php artisan serve --host=0.0.0.0
 
 Using the MongoDB console is as easy as calling:
 
@@ -56,7 +56,7 @@ In your app (.env, ... ), use 'mongo' as hostname for the Mongo server.
 
 > docker run --name percona -e MYSQL_ALLOW_EMPTY_PASSWORD=true -d percona
 
-> docker run --name myproject -it -d --link percona:percona -v $(pwd):/app -w /app -p 8000:8000 verwilst/php7-cli php artisan serve --host=0.0.0.0
+> docker run --name myproject -it -d --link percona:percona -v $(pwd):/app -w /app verwilst/php7-cli php artisan serve --host=0.0.0.0
 
 Using the MySQL console is as easy as calling:
 
