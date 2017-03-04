@@ -11,7 +11,7 @@
                             <span class="icon-bar"></span>
                             <span class="icon-bar"></span>
                         </button>
-                        <a class="navbar-brand" href="#">Laravel/Vue.js</a>
+                        <a class="navbar-brand" href="#">Laravel 5.4 / Vue.js 2.x</a>
                         <ul class="nav navbar-nav">
                             <router-link tag="li" to="/" exact><a>One</a></router-link>
                             <router-link tag="li" to="/two"><a>Two</a></router-link>

@@ -16,7 +16,7 @@ require('./bootstrap');
  * the application, or feel free to tweak this setup for your needs.
  */
 
-var VueRouter = require('vue-router');
+import VueRouter from 'vue-router';
 Vue.use(VueRouter);
 
 var VueResource = require('vue-resource');
