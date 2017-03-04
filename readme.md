@@ -28,13 +28,13 @@ Make sure to chown all the data in your webroot to your own user, since docker s
 The project is configured with Browsersync. Gulp watch creates a proxy that points to our myproject container, so we need to link to it. 
 This also compiles app.css and app.js under public/{css,js}:
 
-> docker run --name myproject-gulp -it -d -v $(pwd):/app --link myproject:web -p 3000:3000 -w /app verwilst/gulp watch
+> docker run --name myproject-watch -it -d -v $(pwd):/app --link myproject:web -p 3000:3000 -w /app verwilst/npm run watch
 
 The proxy listens on port 3000.
 
 ### Starting an existing app
 
-> docker start mongo percona myproject myproject-gulp
+> docker start mongo percona myproject myproject-watch
 
 ( Leaving off mongo and/or percona if you didn't create those docker containers ofcourse. )
 
