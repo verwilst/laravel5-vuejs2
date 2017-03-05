@@ -20,9 +20,7 @@
                 </div>
             </nav>
 
-            <div class="row">
-                <router-view></router-view>
-            </div>
+            <router-view></router-view>
 
         </div><!-- /.container -->
 
