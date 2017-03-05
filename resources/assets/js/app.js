@@ -19,10 +19,7 @@ require('./bootstrap');
 import VueRouter from 'vue-router';
 Vue.use(VueRouter);
 
-var VueResource = require('vue-resource');
-Vue.use(VueResource);
-
-Vue.http.options.root = '/api'
+axios.defaults.baseURL = '/api';
 
 const routes = [
     { path: '/', component: FirstPage },
