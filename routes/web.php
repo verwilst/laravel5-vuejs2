@@ -10,7 +10,7 @@
 | to using a Closure or controller method. Build something great!
 |
 */
-Route::get('/{vue_capture?}', function () {
-    return view('index');
-})->where('vue_capture', '^[^api]');
-#})->where('vue_capture', '[\/\w\.-]*');
+
+Route::get('/{catchall?}', function () {
+    return response()->view('index');
+})->where('catchall', '(.*)');
