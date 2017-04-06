@@ -64,3 +64,6 @@ Using the MySQL console is as easy as calling:
 
 In your app (.env, ... ), use 'percona' as hostname for the MySQL server.
 
+## API-only application
+
+If you're using this project to build an API without a Vue.js frontend, you might be better off by not starting the myproject-watch container, but opening port 8000 on the 'myproject' container by adding -p 8000:8000, and browsing to http://127.0.0.1:8000 instead. That stops browsersync from constantly reloading /api/documentation.
